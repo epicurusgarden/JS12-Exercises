@@ -60,6 +60,6 @@ $( document ).ready(function(){
     });
 
     $(".doubleClick").on("dblclick", function(){
-        $(".growBig").animate({fontSize: "4em"}, 3000)
+        $(".growBig").animate({fontSize: "4em", opacity: .3}, 3000)
     });
 })
