@@ -62,4 +62,38 @@ $( document ).ready(function(){
     $(".doubleClick").on("dblclick", function(){
         $(".growBig").animate({fontSize: "4em", opacity: .3}, 3000)
     });
+
+    $("pre").on({
+
+        mouseenter: function(){
+            $(this).css("background-color", "lightGrey");
+        },
+        mouseleave: function(){
+            $(this).css("background-color", "lightBlue");
+        },
+        click: function(){
+            $(this).css("background-color", "yellow");
+        }
+
+    });
+
+    // $("input").keypress(function(event){
+    //     if(event.which == 13){
+    //         $(".keyPressed").text("Πάτησες enter");
+    //     }
+    // });
+
+    $("input").on("keypress", function(event){
+        $(".keyPressed").text(event.type + " : " + event.which);
+    });
+    
+    //Add a p to article
+    const $leaveDoc = $("article");
+    $leaveDoc.append("<p>Πριν φύγεις πέρασε από πάνω το ποντίκι σου για να υπογραμμίσεις το κείμενο και φεύγοντας κάνε μου κλικ</p>").addClass("go");
+    
+    //change css on mouse enter event
+    $leaveDoc.on("mouseenter", function(){
+        $(this).css("text-decoration", "underline");
+    });
+
 })
