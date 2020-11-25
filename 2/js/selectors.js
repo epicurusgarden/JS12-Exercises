@@ -89,11 +89,23 @@ $( document ).ready(function(){
     
     //Add a p to article
     const $leaveDoc = $("article");
-    $leaveDoc.append("<p>Πριν φύγεις πέρασε από πάνω το ποντίκι σου για να υπογραμμίσεις το κείμενο και φεύγοντας κάνε μου κλικ</p>").addClass("go");
+    $leaveDoc.append("<p>Πριν φύγεις πέρασε από πάνω το ποντίκι σου για να υπογραμμίσεις το κείμενο και φεύγοντας κάνε μου κλικ</p>");
     
     //change css on mouse enter event
     $leaveDoc.on("mouseenter", function(){
         $(this).css("text-decoration", "underline");
     });
+
+    //DOM traverse
+    // const $allToClassGo = $("pre").parents();
+    // $allToClassGo.addClass("go");
+    
+    // const $parentToClassGo = $(".keyPressed").parent();
+    // $parentToClassGo.addClass("go");
+
+    // const $childrenToClassGo = $("#listSelection").children();
+    // $childrenToClassGo.addClass("go");
+    
+
 
 })
