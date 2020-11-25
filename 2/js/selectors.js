@@ -106,6 +106,9 @@ $( document ).ready(function(){
     // const $childrenToClassGo = $("#listSelection").children();
     // $childrenToClassGo.addClass("go");
     
+    //Add nodes to Html
+    const $newP = $("<p>THIS IS SPARTA!!</p>");
+    $("article").prepend($newP);
 
 
 })
